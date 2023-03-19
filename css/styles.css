@@ -156,9 +156,11 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+      to right,
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/people-office.jpg);
   background-color: var(--main-title-color);
 }
@@ -250,7 +252,6 @@ a {
 .icon-btn {
   fill: var(--main-title-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .close-btn:hover {
@@ -268,12 +269,165 @@ a {
 .close-btn:focus .icon-btn {
   fill: var(--main-background-color);
 }
+/* --------------------------------- */
+.modal-form {
+  position: absolute;
+  left: 24px;
+  top: 72px;
+  width: 360px;
+  display: block;
+}
+.form-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--main-title-color);
+  margin-bottom: 16px;
+}
+.label-field {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--svg-icon-color);
+  display: block;
+}
+.input-wrap {
+  position: relative;
+}
+.input-form {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--svg-icon-color);
+  padding-left: 38px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  margin-top: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-form:hover {
+  border: 1px solid var(--main-btn-color);
+}
+.input-form:focus {
+  border: 1px solid var(--main-btn-color);
+}
+.textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--svg-icon-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  padding-left: 16px;
+  padding-top: 8px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea:hover {
+  border: 1px solid var(--main-btn-color);
+}
+.textarea:focus {
+  border: 1px solid var(--main-btn-color);
+}
+.modal-icon {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: translateX(80%);
+}
+.person {
+  fill: var(--main-title-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-wrap:hover .person {
+  fill: var(--main-btn-color);
+}
+/* -///////////// */
+.label-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--svg-icon-color);
+  display: block;
+  text-align: center;
+  display: block;
+}
+.check{
+  display: flex;
+  gap: 8px;
+  
+}
+.check-box{
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--main-title-color);
+  border-radius: 2px;
+  left: 0%;
+  top: 0%;
+}
+.check-icon{
+  position: absolute;
+  left: 15%;
+  top: 20%;
 
+}
+.checkbox{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+       appearance:none;
+}
+.checkbox:checked ~ .check-box{
+  border: 1px solid var(--main-title-color);
+  background-color:var(--main-link-color);
+  background-size: contain;
+  background-origin: border-box;
+}
+.fill-btn {
+  display: block;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--main-background-color);
+  background-color: var(--main-btn-color);
+  font-family: inherit;
+  border: none;
+  padding: 16px 64px;
+  border-radius: 4px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.fill-btn:hover {
+  background-color: var(--main-link-color);
+}
+.fill-btn:focus {
+  background-color: var(--main-link-color);
+}
+.form-btn {
+  margin-top: 24px;
+}
+.input-form {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.policy{
+  color: var(--main-btn-color);
+text-decoration-line: underline;}
 /*strategy*/
 .strategy {
   padding: 120px 0;
 }
-
 .strategy-list {
   display: flex;
 }
@@ -533,13 +687,67 @@ a {
 .footer-span {
   color: var(--main-btn-color);
 }
+.subscribe {
+  margin-left: 80px;
+}
+.subscribe-block {
+  display: flex;
+  margin-top: 16px;
+  gap: 24px;
+}
+.subscribe-text {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-background-color);
+}
 
+.subscribe-form {
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--main-title-color);
+  border: 1px solid var(--main-background-color);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--main-background-color);
+  padding-left: 16px;
+}
+.subscribe-btn {
+  position: relative;
+  width: 165px;
+  height: 40px;
+}
+.subscribe-icon {
+  position: absolute;
+  left: 70%;
+  top: 20%;
+}
+.subscribe-item {
+  padding: 8px 64px 8px 24px;
+  background-color: var(--main-btn-color);
+  border: none;
+  border-radius: 4px;
+  color: var(--main-background-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.subscribe-item:hover {
+  background-color: var(--main-link-color);
+}
+.subscribe-item:focus {
+  background-color: var(--main-link-color);
+}
 /*portfolio-secsion*/
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
 }
-
 .portfolio-button {
   font-weight: 500;
   font-size: 16px;
@@ -552,8 +760,7 @@ a {
   padding: 12px 24px;
   font-family: inherit;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-btn {
@@ -575,7 +782,7 @@ a {
   border-top: none;
   padding: 32px 16px;
 }
-.portfolio-item{
+.portfolio-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover {
@@ -626,7 +833,7 @@ a {
   width: 100%;
   height: 100%;
   color: var(--second-background-color);
-  background-color: var(--main-link-color);
+  background-color: var(--main-btn-color);
   padding: 40px 32px 0 32px;
   font-size: 16px;
   line-height: 1.5;
