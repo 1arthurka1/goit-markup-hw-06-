@@ -363,7 +363,7 @@ a {
 .check{
   display: flex;
   gap: 8px;
-  
+  align-items: center;
 }
 .check-box{
   position: relative;
